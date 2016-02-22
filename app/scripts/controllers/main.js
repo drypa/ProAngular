@@ -13,7 +13,7 @@ angular.module('marketApp')
     $scope.$watch(function(){
       return $location.path();
     },function(path){
-      if(_.contains(path,'watchlist')){
+      if(path.indexOf('watchlist')>-1){
         $scope.activeView = 'watchlist';
       }else{
         $scope.activeView = 'dashboard';

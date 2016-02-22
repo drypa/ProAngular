@@ -8,8 +8,8 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -32,7 +32,7 @@
         <li ng-class="{active: activeView === 'dashboard'}">
           <a class="dropdowm-toggle" data-toggle="dropdown">Wachlists</a>
           <ul class="dropdown-menu">
-            <li ng-if="!watchlist.length" class="dropdown-header">
+            <li ng-if="!watchlists.length" class="dropdown-header">
               no lists
             </li>
             <li ng-repeat="list in watchlists track by $index">
@@ -48,11 +48,7 @@
   </div>
 </nav>
 
-
-<div class="container">
-  <div ng-view=""></div>
-</div>
-<stk-watchlist-panel></stk-watchlist-panel>
+<div ng-view=""></div>
 
 <div class="footer">
   <div class="container">
@@ -85,6 +81,7 @@
 <script src="scripts/directives/stk-watchlist-panel.js"></script>
 <script src="scripts/controllers/dashboard.js"></script>
 <script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/watchlist.js"></script>
 <!-- endbuild -->
 </body>
 </html>
